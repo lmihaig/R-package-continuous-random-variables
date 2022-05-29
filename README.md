@@ -1,2 +1,2 @@
-# R-package-va-continue
+# R-package-continuous-random-variables
 Proiect laborator PS
