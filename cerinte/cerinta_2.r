@@ -16,3 +16,7 @@ is_pdf <- function(func) {
 
     return(FALSE)
 }
+
+# EX:
+# f <- function(x) ifelse(x >= -1 & x <= 1, 1 - abs(x), 0)
+# is_pdf(f)
