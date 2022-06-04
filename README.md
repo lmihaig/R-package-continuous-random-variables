@@ -6,10 +6,10 @@ Proiect laborator PS
 normalizare k. In cazul in care o asemenea constanta nu exista, afisarea unui mesaj
 corespunzator catre utilizator.
 - [X] 2) Verificarea daca o functie introdusa de utilizator este densitate de probabilitate.
-- [ ] 3) Crearea unui obiect de tip variabila aleatoare continua pornind de la o densitate de 
+- [X] 3) Crearea unui obiect de tip variabila aleatoare continua pornind de la o densitate de 
 probabilitate introdusa de utilizator. Functia trebuie sa aiba optiunea pentru variabile 
 aleatoare unidimensionale si respectiv bidimensionale.
-- [ ] 4) Reprezentarea grafica a densitatii si a functiei de repartitie pentru diferite valori ale 
+- [X] 4) Reprezentarea grafica a densitatii si a functiei de repartitie pentru diferite valori ale 
 parametrilor repartitiei. In cazul in care functia de repartitie nu este data intr-o forma 
 explicita(ex. repartitia normala) se accepta reprezentarea grafica a unei aproximari a 
 acesteia.
