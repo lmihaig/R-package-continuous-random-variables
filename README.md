@@ -13,7 +13,7 @@ aleatoare unidimensionale si respectiv bidimensionale.
 parametrilor repartitiei. In cazul in care functia de repartitie nu este data intr-o forma 
 explicita(ex. repartitia normala) se accepta reprezentarea grafica a unei aproximari a 
 acesteia.
-- [ ] 5) Calculul mediei, dispersiei si a momentelor initiale si centrate pana la ordinul 4(daca 
+- [X] 5) Calculul mediei, dispersiei si a momentelor initiale si centrate pana la ordinul 4(daca 
 exista). Atunci cand unul dintre momente nu exista, se va afisa un mesaj corespunzator 
 catre utilizator.
 - [ ] 6) Calculul mediei si dispersiei unei variabile aleatoare g(X), unde X are o repartitie 

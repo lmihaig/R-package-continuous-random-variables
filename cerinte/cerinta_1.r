@@ -3,9 +3,18 @@
 # corespunzator catre utilizator.
 
 find_normalizing_constant <- function(func) {
-    # formula for normalizing constant
-    integral <- integrate(func, lower = -Inf, upper = Inf)$value
-    return(1 / integral)
+    tryCatch(
+        {
+            # formula for normalizing constant
+            integral <- integrate(func, lower = -Inf, upper = Inf)$value
+            return(1 / integral)
+        },
+        error = function(e) {
+            warning("Normalizing constant not found")
+            warning(e$message)
+            return(NULL)
+        }
+    )
 }
 
 
