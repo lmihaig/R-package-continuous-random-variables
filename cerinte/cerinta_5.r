@@ -11,7 +11,7 @@ expectation <- function(func) {
             return(integrate(new_func, lower = -Inf, upper = Inf)$value)
         },
         error = function(e) {
-            warning("Average not found")
+            warning("Expectation not found")
             warning(e$message)
             return(NULL)
         }
@@ -27,7 +27,7 @@ deviation <- function(func) {
             return(integrate(new_func, lower = -Inf, upper = Inf)$value)
         },
         error = function(e) {
-            warning("Dispersion not found")
+            warning("Deviation not found")
             warning(e$message)
             return(NULL)
         }
