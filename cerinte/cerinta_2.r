@@ -3,6 +3,7 @@
 is_pdf <- function(func) {
     tryCatch(
         {
+            if (!is.function(func)) stop("Parameter func has to be a function.")
             # generate a faux (-Inf, Inf) interval
             xs <- seq(-1e+6, 1e+6, len = 10000)
 

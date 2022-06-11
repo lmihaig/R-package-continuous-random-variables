@@ -5,6 +5,7 @@
 find_normalizing_constant <- function(func) {
     tryCatch(
         {
+            if (!is.function(func)) stop("Parameter func has to be a function.")
             # formula for normalizing constant
             integral <- integrate(func, lower = -Inf, upper = Inf)$value
             return(1 / integral)

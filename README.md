@@ -16,7 +16,7 @@ acesteia.
 - [X] 5) Calculul mediei, dispersiei si a momentelor initiale si centrate pana la ordinul 4(daca 
 exista). Atunci cand unul dintre momente nu exista, se va afisa un mesaj corespunzator 
 catre utilizator.
-- [ ] 6) Calculul mediei si dispersiei unei variabile aleatoare g(X), unde X are o repartitie 
+- [X] 6) Calculul mediei si dispersiei unei variabile aleatoare g(X), unde X are o repartitie 
 continua cunoscuta iar g este o functie continua precizata de utilizator.
 - [ ] 7) Crearea unei functii P care permite calculul diferitelor tipuri de probabilitati asociate 
 unei variabile aleatoare continue(similar functiei P din pachetul discreteRV) 
@@ -30,5 +30,5 @@ continue(Atentie:Trebuie sa folositi densitatea comuna a celor doua variabile
 aleatoare!)
 - [ ] 11) Pornind de la densitatea comuna a doua variabile aleatoare continue, construirea 
 densitatilor marginale si a densitatilor conditionate.
-- [ ] 12)Construirea sumei si diferentei a doua variabile aleatoare continue
+- [X] 12)Construirea sumei si diferentei a doua variabile aleatoare continue
 independente(folositi formula de convolutie)

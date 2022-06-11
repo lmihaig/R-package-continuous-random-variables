@@ -2,9 +2,10 @@
 # exista). Atunci cand unul dintre momente nu exista, se va afisa un mesaj corespunzator
 # catre utilizator.
 
-expectation <- function(func) {
+expectation <- function(cRV) {
     tryCatch(
         {
+            func <- cRV$pdf
             new_func <- function(x) {
                 x * func(x)
             }
@@ -18,9 +19,10 @@ expectation <- function(func) {
     )
 }
 
-deviation <- function(func) {
+deviation <- function(cRV) {
     tryCatch(
         {
+            func <- cRV$pdf
             new_func <- function(x) {
                 ((x - expectation(func)) * func(x))
             }
@@ -34,12 +36,13 @@ deviation <- function(func) {
     )
 }
 
-initial_moments <- function(func) {
+initial_moments <- function(cRV) {
     # will return a list containing the 4 moments (if they exist)
     moments_list <- list()
     for (i in 1:4) {
         tryCatch(
             {
+                func <- cRV$pdf
                 new_func <- function(x) {
                     (x^i) * func(x)
                 }
@@ -58,12 +61,13 @@ initial_moments <- function(func) {
 }
 
 
-central_moments <- function(func) {
+central_moments <- function(cRV) {
     # will return a list containing the 4 moments (if they exist)
     moments_list <- list()
     for (i in 1:4) {
         tryCatch(
             {
+                func <- cRV$pdf
                 new_func <- function(x) {
                     (x - expectation(func))^i * func(x)
                 }
@@ -82,12 +86,13 @@ central_moments <- function(func) {
 }
 
 # BONUS
-factorial_moments <- function(func) {
+factorial_moments <- function(cRV) {
     # will return a list containing the 4 moments (if they exist)
     moments_list <- list()
     for (i in 1:4) {
         tryCatch(
             {
+                func <- cRV$pdf
                 new_func <- function(x) {
                     (factorial(x) / factorial(x - i)) * func(x)
                 }
