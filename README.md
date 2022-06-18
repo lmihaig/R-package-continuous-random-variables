@@ -28,7 +28,7 @@ aleatoare continue( solicitati material suport pentru partea de simulare).
 - [ ] 10)Calculul covariantei si coeficientului de corelatie pentru doua variabile aleatoare 
 continue(Atentie:Trebuie sa folositi densitatea comuna a celor doua variabile 
 aleatoare!)
-- [ ] 11) Pornind de la densitatea comuna a doua variabile aleatoare continue, construirea 
+- [X] 11) Pornind de la densitatea comuna a doua variabile aleatoare continue, construirea 
 densitatilor marginale si a densitatilor conditionate.
 - [X] 12)Construirea sumei si diferentei a doua variabile aleatoare continue
 independente(folositi formula de convolutie)
