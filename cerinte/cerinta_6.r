@@ -7,7 +7,7 @@ expected_value <- function(g, cRV, lower = -Inf, upper = Inf) {
     }
     tryCatch(
         {
-            func <- cRV$pdf
+            func <- attr(cRV, "pdf")
             new_func <- function(x) {
                 g(x) * func(x)
             }
@@ -28,7 +28,7 @@ variance <- function(g, cRV, lower = -Inf, upper = Inf) {
     }
     tryCatch(
         {
-            func <- cRV$pdf
+            func <- attr(cRV, "pdf")
             exp_val <- expected_value(g, func, lower, upper)
             new_func <- function(x) {
                 (g(x) - exp_val)^2 * func(x)

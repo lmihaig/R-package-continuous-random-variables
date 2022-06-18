@@ -10,7 +10,9 @@
 #' @param cRV Is the continuous random variable for which we want to find the expectation.
 #' @return The value of the integral to determine the expectation
 #' @examples
-#' rv <- cRV(function(x) {(0 <= x & x <= 1) * (3\*x^2)})
+#' rv <- cRV(function(x) {
+#'     (0 <= x & x <= 1) * (3 * x^2)
+#' })
 #' expectation(rv)
 expectation <- function(cRV) {
     if (class(cRV) != "cRV") {
@@ -18,7 +20,7 @@ expectation <- function(cRV) {
     }
     tryCatch(
         {
-            func <- cRV$pdf
+            func <- attr(cRV, "pdf")
             new_func <- function(x) {
                 x * func(x)
             }
@@ -39,7 +41,9 @@ expectation <- function(cRV) {
 #' @param cRV Is the continuous random variable for which we want to find the variance.
 #' @return The value of the integral to determine the variance
 #' @examples
-#' rv <- cRV(function(x) {(0 <= x & x <= 1) * (3\*x^2)})
+#' rv <- cRV(function(x) {
+#'     (0 <= x & x <= 1) * (3 * x^2)
+#' })
 #' variance(rv)
 variance <- function(cRV) {
     if (class(cRV) != "cRV") {
@@ -47,7 +51,7 @@ variance <- function(cRV) {
     }
     tryCatch(
         {
-            func <- cRV$pdf
+            func <- attr(cRV, "pdf")
             new_func <- function(x) {
                 ((x - expectation(func)^2) * func(x))
             }
@@ -68,7 +72,9 @@ variance <- function(cRV) {
 #' @param cRV Is the continuous random variable for which we want to find the initial moments
 #' @return A list containing the first four initial moments
 #' @examples
-#' rv <- cRV(function(x) {(0 <= x & x <= 1) * (3\*x^2)})
+#' rv <- cRV(function(x) {
+#'     (0 <= x & x <= 1) * (3 * x^2)
+#' })
 #' initial_moments(rv)
 initial_moments <- function(cRV) {
     # will return a list containing the 4 moments (if they exist)
@@ -79,7 +85,7 @@ initial_moments <- function(cRV) {
     for (i in 1:4) {
         tryCatch(
             {
-                func <- cRV$pdf
+                func <- attr(cRV, "pdf")
                 new_func <- function(x) {
                     (x^i) * func(x)
                 }
@@ -103,10 +109,12 @@ initial_moments <- function(cRV) {
 #' @param cRV Is the continuous random variable for which we want to find the central moments
 #' @return A list containing the first four central moments
 #' @examples
-#' rv <- cRV(function(x) {(0 <= x & x <= 1) * (3\*x^2)})
+#' rv <- cRV(function(x) {
+#'     (0 <= x & x <= 1) * (3 * x^2)
+#' })
 #' central_moments(rv)
 central_moments <- function(cRV) {
-    # will return a list containing the 4 moments (if they exist)\
+    # will return a list containing the 4 moments (if they exist)
     if (class(cRV) != "cRV") {
         warning("Expected cRV object")
     }
@@ -114,7 +122,7 @@ central_moments <- function(cRV) {
     for (i in 1:4) {
         tryCatch(
             {
-                func <- cRV$pdf
+                func <- attr(cRV, "pdf")
                 new_func <- function(x) {
                     (x - expectation(func))^i * func(x)
                 }
@@ -142,7 +150,7 @@ factorial_moments <- function(cRV) {
     for (i in 1:4) {
         tryCatch(
             {
-                func <- cRV$pdf
+                func <- attr(cRV, "pdf")
                 new_func <- function(x) {
                     (factorial(x) / factorial(x - i)) * func(x)
                 }

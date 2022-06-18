@@ -11,10 +11,12 @@ difCRV <- function(cRV1, cRV2) {
     if (class(cRV1) != "cRV" || class(cRV2) != "cRV") {
         warning("Expected cRV object")
     }
+    fun1 <- attr(cRV1, "pdf")
+    fun2 <- attr(cRV2, "pdf")
     function(t) {
         integrate(
             f = function(r) {
-                cRV1$pdf(r) * cRV2$pdf(t - r)
+                fun1(r) * fun2(t - r)
             },
             lower = -Inf,
             upper = Inf
@@ -32,10 +34,12 @@ sumCRV <- function(cRV1, cRV2) {
     if (class(cRV1) != "cRV" || class(cRV2) != "cRV") {
         warning("Expected cRV object")
     }
+    fun1 <- attr(cRV1, "pdf")
+    fun2 <- attr(cRV2, "pdf")
     function(t) {
         integrate(
             f = function(r) {
-                cRV1$pdf(r) * cRV2$pdf(r - t)
+                fun1(r) * fun2(r - t)
             },
             lower = -Inf,
             upper = Inf
