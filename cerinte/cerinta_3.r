@@ -52,7 +52,7 @@ get_cdf_from_pdf <- function(pdf) {
 #' X <- cRV(pdf1)
 #' 
 #' # Define a valid pdf with two parameters
-#' pdf2 <- function(x) { (0 <= x & x <= 1 & 0 <= y & y <= 1) * (2 \* (1-x)) }
+#' pdf2 <- function(x, y) { (0 <= x & x <= 1 & 0 <= y & y <= 1) * (2 \* (1-x)) }
 #' 
 #' # Create a bidimensional continuous random variable with pdf2
 #' Y <- cRV(pdf2)
@@ -64,7 +64,7 @@ cRV <- function(pdf) {
     if (!is_pdf(pdf)) stop("Provided function is not a valid PDF.")
   }
   else if (length(formals(pdf)) == 2) {
-    if (!is_joint_pdf(f)) stop("Provided function is not a valid PDF.")
+    if (!is_joint_pdf(pdf)) stop("Provided function is not a valid PDF.")
   }
   else stop("Provide a function that takes either one or two variables.")
   
