@@ -75,5 +75,7 @@ cRV <- function(pdf) {
   return(pdf)
 }
 
+
+
 # Obs:
 #   Pachetul discreteRV folosit ca inspiratie

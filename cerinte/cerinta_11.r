@@ -78,18 +78,3 @@ cond_distribution <- function(pdf, x = NULL, y = NULL) {
     }
   }
 }
-
-
-pdf2 <- function(x, y) { (0 <= x & x <= 1 & 0 <= y & y <= 1) * (2/3 * (x + 2*y)) }
-
-f_X <- X_marginal_dist(pdf2)
-f_Y <- Y_marginal_dist(pdf2)
-
-plot_fun(f_X, seq(-1, 2, 0.01))
-plot_fun(f_Y, seq(-1, 2, 0.01))
-
-f_XY <- cond_distribution(pdf2, y = 0.3)
-f_YX <- cond_distribution(pdf2, x = 0.1)
-
-plot_fun(f_XY, seq(-1, 2, 0.01))
-plot_fun(f_YX, seq(-1, 2, 0.01))
