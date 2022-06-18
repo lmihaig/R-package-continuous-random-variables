@@ -18,7 +18,7 @@ exista). Atunci cand unul dintre momente nu exista, se va afisa un mesaj corespu
 catre utilizator.
 - [X] 6) Calculul mediei si dispersiei unei variabile aleatoare g(X), unde X are o repartitie 
 continua cunoscuta iar g este o functie continua precizata de utilizator.
-- [X] 7) Crearea unei functii P care permite calculul diferitelor tipuri de probabilitati asociate 
+- [x] 7) Crearea unei functii P care permite calculul diferitelor tipuri de probabilitati asociate 
 unei variabile aleatoare continue(similar functiei P din pachetul discreteRV) 
 - [ ] 8) Afisarea unei "fise de sinteza" care sa contina informatii de baza despre respectiva 
 repartitie(cu precizarea sursei informatiei!). Relevant aici ar fi sa precizati pentru ce e 
