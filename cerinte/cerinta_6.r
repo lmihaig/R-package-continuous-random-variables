@@ -2,6 +2,9 @@
 # continua cunoscuta iar g este o functie continua precizata de utilizator.
 
 expected_value <- function(g, cRV, lower = -Inf, upper = Inf) {
+    if (class(cRV) != "cRV") {
+        warning("Expected cRV object")
+    }
     tryCatch(
         {
             func <- cRV$pdf
@@ -20,6 +23,9 @@ expected_value <- function(g, cRV, lower = -Inf, upper = Inf) {
 
 
 variance <- function(g, cRV, lower = -Inf, upper = Inf) {
+    if (class(cRV) != "cRV") {
+        warning("Expected cRV object")
+    }
     tryCatch(
         {
             func <- cRV$pdf
