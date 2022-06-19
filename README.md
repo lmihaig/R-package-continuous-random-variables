@@ -20,7 +20,7 @@ catre utilizator.
 continua cunoscuta iar g este o functie continua precizata de utilizator.
 - [x] 7) Crearea unei functii P care permite calculul diferitelor tipuri de probabilitati asociate 
 unei variabile aleatoare continue(similar functiei P din pachetul discreteRV) 
-- [ ] 8) Afisarea unei "fise de sinteza" care sa contina informatii de baza despre respectiva 
+- [X] 8) Afisarea unei "fise de sinteza" care sa contina informatii de baza despre respectiva 
 repartitie(cu precizarea sursei informatiei!). Relevant aici ar fi sa precizati pentru ce e 
 folosita in mod uzual acea repartitie, semnificatia parametrilor, media, dispersia etc.
 - [ ] 9) Generarea a n valori(unde n este precizat de utilizator!) dintr-o repartitie de variabile 
